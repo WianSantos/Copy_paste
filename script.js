@@ -10,7 +10,7 @@ function myFunction() {
     navigator.clipboard.writeText(copyText.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
+    alert("Texto copiado: " + copyText.value);
   }
   function myFunction2() {
     /* Get the text field */
@@ -24,7 +24,7 @@ function myFunction() {
     navigator.clipboard.writeText(copyText2.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText2.value);
+    alert("Texto copiado: " + copyText2.value);
   }
   function myFunction3() {
     /* Get the text field */
@@ -38,7 +38,7 @@ function myFunction() {
     navigator.clipboard.writeText(copyText3.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText3.value);
+    alert("Texto copiado: " + copyText3.value);
   }
   function myFunction4() {
     /* Get the text field */
@@ -52,7 +52,7 @@ function myFunction() {
     navigator.clipboard.writeText(copyText4.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText4.value);
+    alert("Texto copiado: " + copyText4.value);
   }
   function myFunction5() {
     /* Get the text field */
@@ -66,7 +66,7 @@ function myFunction() {
     navigator.clipboard.writeText(copyText5.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText5.value);
+    alert("Texto copiado: " + copyText5.value);
   }
   function myFunction6() {
     /* Get the text field */
@@ -80,5 +80,33 @@ function myFunction() {
     navigator.clipboard.writeText(copyText6.value);
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText6.value);
+    alert("Texto copiado: " + copyText6.value);
+  }
+  function myFunction7() {
+    /* Get the text field */
+    var copyText7 = document.getElementById("myInput7");
+  
+    /* Select the text field */
+    copyText7.select();
+    copyText7.setSelectionRange(0, 99999); /* For mobile devices */
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText7.value);
+  
+    /* Alert the copied text */
+    alert("Texto copiado: " + copyText7.value);
+  }
+  function myFunction8() {
+    /* Get the text field */
+    var copyText8 = document.getElementById("myInput8");
+  
+    /* Select the text field */
+    copyText8.select();
+    copyText8.setSelectionRange(0, 99999); /* For mobile devices */
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText8.value);
+  
+    /* Alert the copied text */
+    alert("Texto copiado: " + copyText8.value);
   }
