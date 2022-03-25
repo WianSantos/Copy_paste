@@ -1,0 +1,17 @@
+.rodape{
+    background: #fadef1;
+    color: #fdfdfd;
+    padding: 1rem;
+    text-transform: lowercase;
+}
+.rodape__li{
+    text-align: right;
+}
+
+.rodape__nome{
+    text-align: left;
+}
+
+.rodape__github{
+    text-align: center;
+}

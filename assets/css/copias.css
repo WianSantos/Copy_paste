@@ -1,0 +1,21 @@
+.copias{
+    background: #fce3f6;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+@media screen and (min-width: 0) {
+    .copias{
+        padding:5rem 0 0 1rem ;   
+    }
+}
+@media screen and( min-width: 768px) {
+    .copias{
+        padding:5rem 0 0 2.5rem ; 
+    }
+}
+@media screen and (min-width: 992px) {
+    .copias{
+        padding:5rem 0 0 5rem ;   
+    }
+}

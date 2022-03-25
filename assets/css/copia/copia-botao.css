@@ -1,0 +1,14 @@
+.copia__botao{
+    margin-left: 89px;
+    background: #8d0606;
+    border: none;
+    border-radius: 20px;
+    color: #fdfdfd; 
+    padding: 1rem;
+    transition: all .1s ease-in-out;
+}
+.copia__botao:hover{
+    cursor: pointer;
+    background: #620404;
+    
+}

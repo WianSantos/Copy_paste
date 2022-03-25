@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:100,300,400,500,700,900" rel="stylesheet" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Copy & Paste</title>
+        <link href="./assets/css/normalize.css" rel="stylesheet" />
+        <link href="./assets/css/reset.css" rel="stylesheet" />
+        <link href="./assets/css/style.css" rel="stylesheet" />
+        <link href="./assets/css/cabecalho.css" rel="stylesheet" />
+        <link href="./assets/css/menu/menu-item.css" rel="stylesheet" />
+        <link href="./assets/css/menu/menu-link.css" rel="stylesheet" />
+        <link href="./assets/css/menu/menu-lista.css" rel="stylesheet" />
+        <link href="./assets/css/banner/banner.css" rel="stylesheet" />
+        <link href="./assets/css/banner/banner-image.css" rel="stylesheet" />
+        <link href="./assets/css/banner/banner-titulo.css" rel="stylesheet" />
+        <link href="./assets/css/sobre/sobre.css" rel="stylesheet" />
+        <link href="./assets/css/sobre/sobre-descricao.css" rel="stylesheet" />
+        <link href="./assets/css/sobre/sobre-titulo.css" rel="stylesheet" />
+        <link href="./assets/css/copia/copia-botao.css" rel="stylesheet" />
+        <link href="./assets/css/copia/copia-conteudo.css" rel="stylesheet" />
+        <link href="./assets/css/copia/copia-descricao.css" rel="stylesheet" />
+        <link href="./assets/css/copia/copia-imagem.css" rel="stylesheet" />
+        <link href="./assets/css/copia/copia-titulo.css" rel="stylesheet" />
+        <link href="./assets/css/copia/copia.css" rel="stylesheet" />
+        <link href="./assets/css/copias.css" rel="stylesheet" />
+        <link href="./assets/css/quemSomos/quemSomos-descricao.css" rel="stylesheet" />
+        <link href="./assets/css/quemSomos/quemSomos-titulo.css" rel="stylesheet" />
+        <link href="./assets/css/quemSomos/quemSomos.css" rel="stylesheet" />
+        <link href="./assets/css/pessoas.css" rel="stylesheet" />
+        <link href="./assets/css/pessoa/pessoa.css" rel="stylesheet" />
+        <link href="./assets/css/pessoa/pessoa-funcao.css" rel="stylesheet" />
+        <link href="./assets/css/pessoa/pessoa-imagem.css" rel="stylesheet" />
+        <link href="./assets/css/pessoa/pessoa-nome.css" rel="stylesheet" />
+        <link href="./assets/css/rodape.css" rel="stylesheet" />
+        <link href="./assets/css/logo.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="cabecalho">
+            <img class="logo" alt="fruta e fruto" src="./assets/img/COPY-PASTE1.png">
+            <nav class="menu">
+                <ul class="menu__lista">
+                    <li class="menu__item"><a class="menu__link ativo" href="#">Início</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#quem-sou-eu">Quem criou?</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="banner">
+            <img class="banner__imagem" src="./assets/img/1600w-vzyEitAe9-M.webp"></img>
+            <h2 class="banner__titulo">
+                Copie e cole suas respostas rápidas
+            </h2>
+        </section>
+        <section class="sobre">
+            <h2 class="sobre__titulo">Copie, cole e economize tempo!</h2>
+            <p class="sobre__descricao">Pare de perder tempo reescrevendo suas mensagens</p>
+        </section>
+        <section class="copias">
+            <div class="copia">
+
+                <div class="copia__conteudo">
+
+                    <textarea rows="15" cols="34" placeholder="Digite aqui seu texto" class="myInput" id="myInput"></textarea>
+                    <button class="copia__botao" onclick="myFunction()">Copiar</button>
+                </div>
+            </div>
+            <div class="copia">
+
+                <div class="copia__conteudo">
+
+                    <textarea rows="15" cols="34" placeholder="Digite aqui seu texto" id="myInput2"></textarea>
+                    <button class="copia__botao" onclick="myFunction2()">Copiar</button>
+                </div>
+            </div>
+            <div class="copia">
+
+                <div class="copia__conteudo">
+
+                    <textarea rows="15" cols="34" placeholder="Digite aqui seu texto" id="myInput3"></textarea>
+                    <button class="copia__botao" onclick="myFunction3()">Copiar</button>
+                </div>
+            </div>
+            <div class="copia">
+
+                <div class="copia__conteudo">
+
+                    <textarea rows="15" cols="34" placeholder="Digite aqui seu texto" id="myInput4"></textarea>
+                    <button class="copia__botao" onclick="myFunction4()">Copiar</button>
+                </div>
+            </div>
+            <div class="copia">
+
+                <div class="copia__conteudo">
+
+                    <textarea rows="15" cols="34" placeholder="Digite aqui seu texto" id="myInput5"></textarea>
+                    <button class="copia__botao" onclick="myFunction5()">Copiar</button>
+                </div>
+            </div>
+            <div class="copia">
+
+                <div class="copia__conteudo">
+
+                    <textarea rows="15" cols="34" placeholder="Digite aqui seu texto" id="myInput6"></textarea>
+                    <button class="copia__botao" onclick="myFunction6()">Copiar</button>
+                </div>
+            </div>
+        </section>
+        <section class="quem-somos" id="quem-sou-eu">
+            <h3 class="quem-somos__titulo">Quem criou este site?</h3>
+            <p class="quem-somos__descricao">Conheça a pessoa por trás desse site...</p>
+            <div class="pessoas">
+                <div class="pessoa">
+                    <div class="pessoa__imagem pessoa__imagem--wian"></div>
+                    <span class="pessoa__nome">Wian Santos</span>
+                    <span class="pessoa__funcao">Padawan em Dev front e back-end</span>
+                </div>
+            </div>
+        </section>
+        <footer class="rodape">
+            <li class="menu__item rodape__li"><a class="menu__link ativo" href="#">Início</a></li>
+            <li class="menu__item rodape__nome"><a class="menu__link ativo" href="https://www.linkedin.com/in/wian-santos/">Wian</a></li>
+            <li class="menu__item rodape__github"><a class="menu__link ativo" href="https://github.com/WianSantos">Github</a></li>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

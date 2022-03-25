@@ -1,0 +1,15 @@
+.pessoa__imagem{
+    border-radius: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    margin: 0 auto;
+
+    width: 300px;
+}
+
+.pessoa__imagem--wian{
+    background-image: url('https://avatars.githubusercontent.com/u/78624344?v=4');
+}
+
