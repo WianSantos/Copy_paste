@@ -1,5 +1,4 @@
 .copia__botao{
-    margin-left: 89px;
     background: #8d0606;
     border: none;
     border-radius: 20px;
@@ -7,8 +6,26 @@
     padding: 1rem;
     transition: all .1s ease-in-out;
 }
+.botao__criar{
+    background: #259434;
+    border: none;
+    border-radius: 20px;
+    color: #fdfdfd; 
+    padding: 1rem;
+    transition: all .1s ease-in-out;
+}
+.botao__excluir{
+    background: #ff4242;
+    border: none;
+    border-radius: 20px;
+    color: #fdfdfd; 
+    padding: 1rem;
+    transition: all .1s ease-in-out;  
+}
+
 .copia__botao:hover{
     cursor: pointer;
     background: #620404;
     
 }
+

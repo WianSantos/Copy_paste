@@ -1,5 +1,6 @@
 .rodape{
-    background: #fadef1;
+    background: linear-gradient(90deg, rgb(126, 46, 234), rgb(194, 113, 149));
+    ;
     color: #fdfdfd;
     padding: 1rem;
     text-transform: lowercase;

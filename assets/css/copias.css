@@ -1,8 +1,14 @@
 .copias{
-    background: #fce3f6;
+    background: linear-gradient(90deg, rgb(126, 46, 234), rgb(194, 113, 149));
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+}
+div#copiado.copiado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 @media screen and (min-width: 0) {
     .copias{

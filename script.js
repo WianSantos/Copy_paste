@@ -1,112 +1,80 @@
-function myFunction() {
-    /* Get the text field */
-    var copyText = document.getElementById("myInput");
-  
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText.value);
+'use strict';
+
+//et banco =[
+//'textoCriado' : 'teste1'},
+//'textoCriado' : 'teste2'}
+//
+//
+const getBanco = () => JSON.parse(localStorage.getItem('copiado')) ?? [];
+const setBanco = (banco) => localStorage.setItem('copiado', JSON.stringify(banco))
+
+const criarItem = (textoCriado, indice) =>{
+  const item = document.createElement('label')
+  item.classList.add('labelCopia')
+  item.innerHTML = `<textarea rows="15" cols="34" value="Digite aqui seu texto" class="myInput" id="myInput" data-indice="${indice}" >${textoCriado}</textarea>
+                    <input type="button" class="copia__botao" value="Copiar" data-indice="${indice}">
+                    <input type="button" class="botao__excluir" value="Excluir" data-indice="${indice}">`
+  document.getElementById('copiado').appendChild(item)
+}
+
+const limparTexto = () =>{
+  const copiado = document.getElementById('copiado')
+  while(copiado.firstChild){
+    copiado.removeChild(copiado.lastChild)
   }
-  function myFunction2() {
-    /* Get the text field */
-    var copyText2 = document.getElementById("myInput2");
-  
-    /* Select the text field */
-    copyText2.select();
-    copyText2.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText2.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText2.value);
+}
+
+const atualizaTela= () =>{         
+  limparTexto()
+
+  const banco = getBanco()
+  banco.forEach ((item,indice) => criarItem (item.textoCriado, indice))
+}
+
+
+const inserirItem = (evento) =>{
+  const tecla = evento.key
+  const texto = evento.target.value
+  if (tecla === '¬'){
+    const banco = getBanco()
+    banco.push({'textoCriado' : evento.target.value})
+    setBanco(banco)
+    atualizaTela()
+    evento.target.value =''
   }
-  function myFunction3() {
-    /* Get the text field */
-    var copyText3 = document.getElementById("myInput3");
-  
-    /* Select the text field */
-    copyText3.select();
-    copyText3.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText3.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText3.value);
+}
+
+const removerItem = (indice)=>{
+  const banco = getBanco() 
+  banco.splice(indice, 1);
+  setBanco(banco)
+  atualizaTela() 
+}
+
+const copiar = (indice) =>{
+  /* Get the text field */
+  const banco = getBanco()
+  var copyText = banco[indice].textoCriado
+   /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText);
+  /* Alert the copied text */
+  alert("Texto copiado: " + copyText);
+}
+
+const clickItem = (evento) =>{
+  const elemento =evento.target;
+  if(elemento.className === 'botao__excluir'){
+    const indice = elemento.dataset.indice
+    removerItem(indice)
+  } else if (elemento.className === 'copia__botao'){
+    const indice = elemento.dataset.indice
+    copiar(indice)
   }
-  function myFunction4() {
-    /* Get the text field */
-    var copyText4 = document.getElementById("myInput4");
-  
-    /* Select the text field */
-    copyText4.select();
-    copyText4.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText4.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText4.value);
-  }
-  function myFunction5() {
-    /* Get the text field */
-    var copyText5 = document.getElementById("myInput5");
-  
-    /* Select the text field */
-    copyText5.select();
-    copyText5.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText5.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText5.value);
-  }
-  function myFunction6() {
-    /* Get the text field */
-    var copyText6 = document.getElementById("myInput6");
-  
-    /* Select the text field */
-    copyText6.select();
-    copyText6.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText6.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText6.value);
-  }
-  function myFunction7() {
-    /* Get the text field */
-    var copyText7 = document.getElementById("myInput7");
-  
-    /* Select the text field */
-    copyText7.select();
-    copyText7.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText7.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText7.value);
-  }
-  function myFunction8() {
-    /* Get the text field */
-    var copyText8 = document.getElementById("myInput8");
-  
-    /* Select the text field */
-    copyText8.select();
-    copyText8.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText8.value);
-  
-    /* Alert the copied text */
-    alert("Texto copiado: " + copyText8.value);
-  }
+}
+
+document.getElementById('myText').addEventListener('keypress', inserirItem)
+document.getElementById('copiado').addEventListener('click', clickItem)
+
+
+
+atualizaTela();

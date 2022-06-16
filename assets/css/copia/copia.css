@@ -1,7 +1,16 @@
 .copia{
     display: flex;
     flex-direction: column;
-    margin-bottom: 5rem;
+    align-items: center;
+    margin-bottom: 10rem;
+    align-items: stretch
+}
+.labelCopia{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 @media screen and (min-width: 0) {
     .copia{
